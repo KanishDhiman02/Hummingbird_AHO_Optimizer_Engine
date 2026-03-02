@@ -1,15 +1,13 @@
 from setuptools import setup, find_packages
 
 setup(
-    name="hummingbird-kanish",
+    name="optimizer_engine",
     version="0.1.0",
-    packages=find_packages(),
+    packages=['optimizer_engine'],
+    description="A high-performance Python library for metaheuristic optimization. Features a custom visit-table mechanism to minimize redundant CPU cycles and memory overhead.",
+    author="Kanish Dhiman",
     install_requires=[
         "numpy",
         "pandas",
-        "scikit-learn"
     ],
-    author="Kanish Dhiman",
-    description="AHO algorithm for feature selection in machine learning pipelines.",
-    url="https://github.com/KanishDhiman02/hummingbird-kanish",
 )
