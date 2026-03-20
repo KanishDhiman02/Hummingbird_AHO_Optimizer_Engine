@@ -20,25 +20,6 @@ pip install .
 The library is designed to be plug-and-play with scikit-learn estimators.
 ```bash
 from optimizer_engine import DataLoader, Optimizer
-from hummingbird_kanish.optimizer import Optimizer
-from sklearn.ensemble import RandomForestClassifier
-
-# 1. Load your dataset
-data = DataLoader("./your_dataset.csv")
-
-# 2. Initialize the optimizer (Works with any sklearn classifier)
-rf_classifier = RandomForestClassifier(random_state=42)
-optimizer = Optimizer(rf_classifier, dataset=data)
-
-# 3. Run the AHO Feature Selection
-results = optimizer.fit()
-
-# 4. Results analysis
-print("Optimized Feature Subset:")
-for feat in results["columns"]:
-    if feat["score"] > 0:
-        print(f"✅ {feat['name']}")
-from hummingbird_kanish.optimizer import Optimizer
 from sklearn.ensemble import RandomForestClassifier
 
 # 1. Load your dataset
